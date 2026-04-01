@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0057B8;
+  --color-primary-dark: #003d80;
+  --color-primary-light: #e6f0fa;
+  --color-accent: #00A3E0;
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+}
+
+body {
+  font-family: "Segoe UI", "Hiragino Sans", "Meiryo", sans-serif;
+  background-color: #f1f5f9;
+}
