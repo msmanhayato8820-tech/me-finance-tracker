@@ -7,6 +7,7 @@ import CfoDashboard from "@/components/CfoDashboard";
 import PmiDashboard from "@/components/PmiDashboard";
 import FinancialTable from "@/components/FinancialTable";
 import ReceivablesView from "@/components/ReceivablesView";
+import SynergyTracker from "@/components/SynergyTracker";
 
 export default function Home() {
   const [role, setRole] = useState<Role>("cfo");
@@ -16,6 +17,7 @@ export default function Home() {
     { key: "dashboard", label: "ダッシュボード" },
     { key: "financial", label: "財務データ一覧" },
     { key: "receivables", label: "売掛金異常検知" },
+    { key: "synergy", label: "シナジー管理" },
   ];
 
   return (
@@ -49,6 +51,7 @@ export default function Home() {
         {tab === "dashboard" && role === "pmi" && <PmiDashboard />}
         {tab === "financial" && <FinancialTable />}
         {tab === "receivables" && <ReceivablesView />}
+        {tab === "synergy" && <SynergyTracker />}
       </main>
     </div>
   );

@@ -4,6 +4,7 @@ import type {
   ReceivableData,
   Alert,
   GroupKpi,
+  SynergyItem,
 } from "@/types";
 
 export const companies: Company[] = [
@@ -211,6 +212,40 @@ export const groupKpi: GroupKpi = {
   revenueGrowthRate: 5.2,
   ebitdaGrowthRate: 7.8,
 };
+
+export const synergyItems: SynergyItem[] = [
+  // MEテクノサービス（完了）- 高達成
+  { id: "sy-001", companyId: "mts", category: "コスト", description: "調達共通化・一括発注によるコスト削減", plannedAmount: 1200, actualAmount: 1380, targetDate: "2025-09-30", status: "完了" },
+  { id: "sy-002", companyId: "mts", category: "レベニュー", description: "グループ横断営業による新規顧客獲得", plannedAmount: 2000, actualAmount: 2250, targetDate: "2025-12-31", status: "完了" },
+
+  // MEパワーシステムズ（完了）- 高達成
+  { id: "sy-003", companyId: "mps", category: "コスト", description: "バックオフィス統合による間接費削減", plannedAmount: 800, actualAmount: 920, targetDate: "2025-06-30", status: "完了" },
+  { id: "sy-004", companyId: "mps", category: "レベニュー", description: "MEテクノとの技術連携による受注拡大", plannedAmount: 1500, actualAmount: 1680, targetDate: "2025-12-31", status: "完了" },
+
+  // MEプラントエンジニアリング（最適化中）- 良好
+  { id: "sy-005", companyId: "mpe", category: "コスト", description: "設備保全費用のグループ共通化", plannedAmount: 600, actualAmount: 510, targetDate: "2026-03-31", status: "進行中" },
+  { id: "sy-006", companyId: "mpe", category: "レベニュー", description: "工場向けソリューションのクロスセル", plannedAmount: 1800, actualAmount: 1440, targetDate: "2026-06-30", status: "進行中" },
+
+  // MEインフラテック（最適化中）- 良好
+  { id: "sy-007", companyId: "mit", category: "コスト", description: "資材調達統合・ベンダー集約", plannedAmount: 700, actualAmount: 630, targetDate: "2026-03-31", status: "進行中" },
+  { id: "sy-008", companyId: "mit", category: "レベニュー", description: "インフラ点検サービスのグループ展開", plannedAmount: 1200, actualAmount: 900, targetDate: "2026-06-30", status: "進行中" },
+
+  // MEファシリティマネジメント（標準化中）- 中程度
+  { id: "sy-009", companyId: "mfm", category: "コスト", description: "清掃・警備サービス統合発注", plannedAmount: 400, actualAmount: 240, targetDate: "2026-06-30", status: "進行中" },
+  { id: "sy-010", companyId: "mfm", category: "レベニュー", description: "グループビルへのFM一括提供", plannedAmount: 900, actualAmount: 450, targetDate: "2026-09-30", status: "遅延" },
+
+  // MEエレクトロニクス（標準化中）- 中程度
+  { id: "sy-011", companyId: "mel", category: "コスト", description: "電子部品共同仕入れによるコスト最適化", plannedAmount: 350, actualAmount: 175, targetDate: "2026-06-30", status: "進行中" },
+  { id: "sy-012", companyId: "mel", category: "レベニュー", description: "IoTセンサー製品のグループ内展開", plannedAmount: 1000, actualAmount: 400, targetDate: "2026-09-30", status: "遅延" },
+
+  // MEグリーンエナジー（統合初期）- 低達成
+  { id: "sy-013", companyId: "mge", category: "コスト", description: "再エネ電力のグループ内融通コスト削減", plannedAmount: 500, actualAmount: 50, targetDate: "2026-12-31", status: "未着手" },
+  { id: "sy-014", companyId: "mge", category: "レベニュー", description: "グループ施設への太陽光・省エネ提案", plannedAmount: 1500, actualAmount: 150, targetDate: "2026-12-31", status: "進行中" },
+
+  // MEビルテクノ（統合初期）- 低達成
+  { id: "sy-015", companyId: "mbt", category: "コスト", description: "建設資材のグループ一括調達", plannedAmount: 300, actualAmount: 30, targetDate: "2026-12-31", status: "未着手" },
+  { id: "sy-016", companyId: "mbt", category: "レベニュー", description: "グループ会社ビル改修受注", plannedAmount: 800, actualAmount: 80, targetDate: "2026-12-31", status: "進行中" },
+];
 
 // ユーティリティ関数
 export function getCompanyById(id: string): Company | undefined {

@@ -1,6 +1,6 @@
 export type Role = "cfo" | "pmi";
 
-export type TabType = "dashboard" | "financial" | "receivables";
+export type TabType = "dashboard" | "financial" | "receivables" | "synergy";
 
 export type PmiStatus = "統合初期" | "標準化中" | "最適化中" | "完了";
 
@@ -40,6 +40,20 @@ export interface Alert {
   severity: "high" | "medium" | "low";
   message: string;
   date: string;
+}
+
+export type SynergyCategory = "コスト" | "レベニュー";
+export type SynergyStatus = "完了" | "進行中" | "遅延" | "未着手";
+
+export interface SynergyItem {
+  id: string;
+  companyId: string;
+  category: SynergyCategory;
+  description: string;
+  plannedAmount: number;   // 万円
+  actualAmount: number;    // 万円
+  targetDate: string;
+  status: SynergyStatus;
 }
 
 export interface GroupKpi {
